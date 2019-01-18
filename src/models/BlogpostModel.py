@@ -31,13 +31,17 @@ class BlogpostModel(db.Model):
         self.modified_at = datetime.datetime.utcnow()
         db.session.commit()
 
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
     @staticmethod
     def get_all_blogposts():
         return BlogpostModel.query.all()
 
     @staticmethod
     def get_one_blogpost(id):
-        return BlogpostsModel.query.get(id)
+        return BlogpostModel.query.get(id)
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
