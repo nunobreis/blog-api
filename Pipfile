@@ -15,6 +15,9 @@ flask-script = "*"
 marshmallow = "*"
 flask-bcrypt = "*"
 pyjwt = "*"
+pytest-cov = "*"
+pytest = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
